@@ -48,18 +48,25 @@ const checkWin = () => {
 	if (boxesWon.length === 9) {
 		if (redCount === blueCount && blueCount === greenCount) {
 			alert("Three Way Draw!");
+      document.getElementById("turnTitle").innerHTML = "Three Way Draw!";
 		} else if (redCount === blueCount && blueCount > greenCount) {
 			alert("Red and Blue Tie for first place, Green Loses!");
+      document.getElementById("turnTitle").innerHTML = "Red and Blue Tie for first place, Green Loses!";
 		} else if (redCount < blueCount && greenCount === blueCount) {
 			alert("Green and Blue tie for first place, Red loses!");
+      document.getElementById("turnTitle").innerHTML = "Green and Blue tie for first place, Red loses!";
 		} else if (redCount === greenCount && greenCount > blueCount) {
 			alert("Red and Green Tie for first place, Blue loses!");
+      document.getElementById("turnTitle").innerHTML = "Red and Green Tie for first place, Blue loses!";
 		} else if (redCount > greenCount && redCount > blueCount) {
 			alert("Red Wins!");
+      document.getElementById("turnTitle").innerHTML = "Red Wins!";
 		} else if (blueCount > greenCount && blueCount > redCount) {
 			alert("Blue Wins!");
+      document.getElementById("turnTitle").innerHTML = "Blue Wins!";
 		} else if (greenCount > blueCount && greenCount > redCount) {
 			alert("Green Wins!");
+      document.getElementById("turnTitle").innerHTML = "Green Wins!";
 		}
 	}
 };
@@ -92,13 +99,13 @@ $(".available").click(function () {
   
 	if (!won) {
     nextTurn();
+    if (turn === 0) {
+      document.getElementById("turnTitle").innerHTML = "Red's Turn";
+    } else if (turn === 1) {
+      document.getElementById("turnTitle").innerHTML = "Blue's Turn";
+    } else if (turn === 2) {
+      document.getElementById("turnTitle").innerHTML = "Green's Turn";
+    }
 	}
-  if (turn === 0) {
-    document.getElementById("turnTitle").innerHTML = "Red's Turn";
-  } else if (turn === 1) {
-    document.getElementById("turnTitle").innerHTML = "Blue's Turn";
-  } else if (turn === 2) {
-    document.getElementById("turnTitle").innerHTML = "Green's Turn";
-  }
 
 });
