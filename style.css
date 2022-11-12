@@ -1,0 +1,93 @@
+h1 {
+  color: red;
+  text-align: center;
+}
+
+body{
+background-color: bisque;
+}
+.homie{
+  text-align: center;
+  font-weight: bold;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.player1 {
+  color: red;
+}
+
+.player2 {
+  color: blue;
+}
+.player3{
+  color: green;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-container > div {
+  margin: 2rem;
+}
+
+.button {
+  text-align: center;
+  margin-top: 50px;
+  margin-right: 25px;
+  margin-left:25px;
+}
+
+.horizLine {
+  width: 100px;
+  height: 10px;
+  display: inline-block;
+  margin-left: 1px;
+  margin-bottom: 5px;
+}
+
+.vertLine {
+  width: 10px;
+  height: 100px;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+
+.red {
+  background-color: rgb(170, 17, 17);
+}
+
+.blue {
+  background-color: rgb(17, 6, 121);
+}
+.green{
+  background-color: rgb(14, 97, 14);
+}
+
+.box {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  margin-left: 40px;
+}
+
+.available:hover {
+  background-color: rgb(222, 138, 11);
+}
+

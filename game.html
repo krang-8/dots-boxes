@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Dots and Boxes!</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <h1>Dots & Boxes!</h1>
+  <div > <p class="homie"  id="turnTitle"> </p> </div>
+  <!-- score container to display scores live  (updated in app.js)-->
+  <div class="score-container">
+  <div > <p class="player1"> <strong>Red :  </strong></p> <p id="redScore">0</p></div> 
+  <div ><p class="player2"> <strong> Blue : </strong></p> <p id="blueScore">0</p></div>
+  <div ><p class="player3"> <strong> Green : </strong> </p> <p id="greenScore">0</p></div>
+  </div>
+
+<!-- creating game grid
+
+  notes : I used classes as identifiers :
+          horizLine : horizontal move
+          vertLine : vertical move
+          box# : notes the boxes which the line is adjacent to (can be multiple)
+          available : if this class is present, the line/move is available to be played
+-->  
+<table class="center">
+    <tr>
+      <td><img src="face.png">
+        <div class="horizLine box1 available"></div>
+      </td>
+      <td><img src="face.png">
+        <div class="horizLine box2 available"></div>
+      </td>
+      <td><img src="face.png">
+        <div class="horizLine box3 available"></div>
+      </td>
+      <td><img src="face.png"></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="vertLine box1 available">
+          <div id="box1" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box1 box2 available">
+          <div id="box2" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box2 box3 available">
+          <div id="box3" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box3 available"></div>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="face.png">
+        <div class="horizLine box1 box4 available"></div>
+      </td>
+      <td><img src="face.png">
+        <div class="horizLine box2 box5 available"></div>
+      </td>
+      <td><img src="face.png">
+        <div class="horizLine box3 box6 available"></div>
+      </td>
+      <td><img src="face.png"></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="vertLine box4 available">
+          <div id="box4" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box4 box5 available">
+          <div id="box5" class="box"> </div>
+      </td>
+      <td>
+        <div class="vertLine box5 box6 available">
+          <div id="box6" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box6 available"></div> 
+      </td>
+    </tr>
+    <tr>
+      <td><img src="face.png">
+        <div class="horizLine box4 box7 available"></div>
+      </td>
+      <td><img src="face.png">
+        <div class="horizLine box5 box8 available"></div>
+      </td>
+      <td><img src="face.png">
+        <div class="horizLine box6 box9 available"></div>
+      </td>
+      <td><img src="face.png"></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="vertLine box7 available">
+          <div id="box7" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box7 box8 available">
+          <div id="box8" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box8 box9 available">
+          <div id="box9" class="box"></div>
+        </div>
+      </td>
+      <td>
+        <div class="vertLine box9 available"></div>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="face.png">
+        <div class="horizLine box7 available"></div>
+      </td>
+      <td><img src="face.png">
+        <div class="horizLine box8 available"></div>
+      </td>
+      <td><img src="face.png">
+        <div class="horizLine box9 available"></div>
+      </td>
+      <td><img src="face.png"></td>
+    </tr>
+  </table>
+
+  <div class="wrapper">
+  <a href="game.html"> <button class="button" > Reset Game </button> </a>
+  <br>
+  <a href="index.html"> <button class="button" > Main Menu </button> </a>
+</div>
+    <script src="./app.js"></script>
+  </body>
+</html>
